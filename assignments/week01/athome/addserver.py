@@ -17,8 +17,10 @@ while True:
     try:
         # Receive the data and send it back
         msg = con.recv(1024)
-        print msg
-        out = con.sendall('YES, received')
+        
+        a, b = (int(msg.split()[0]), int(msg.split()[1]))
+        thesum = str(a + b)
+        out = con.sendall(thesum)
     
     finally:
         # Clean up the connection
