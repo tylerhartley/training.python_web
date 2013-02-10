@@ -12,7 +12,7 @@ from flask import url_for
 from flask import abort
 
 # configuration goes here
-DATABASE = '/tmp/flaskr.db'
+DATABASE = 'C:\\tmp\\flaskr.db'
 SECRET_KEY = 'development key'
 USERNAME = 'admin'
 PASSWORD = 'default'

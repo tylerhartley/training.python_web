@@ -2,7 +2,8 @@ import socket
 import sys
 
 # Create a TCP/IP socket
-aserver = socket.socket( 2, 1, 0)
+#aserver = socket.socket( 2, 1, 0) #Edit due to class example
+aserver = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_IP)
 
 # Bind the socket to the port
 server_address = ('127.0.0.1', 50000)
@@ -25,4 +26,6 @@ while True:
     finally:
         # Clean up the connection
         con.close()
+
+aserver.close()
         
